@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import { Age, CheckBoxF, CheckBoxM, DateBirth, Name, State } from './components';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+  state = {
+    male: false,
+    women: false,
+    name: '',
+    age: '',
+    dateOfBirth: '',
+    estado: 'Estado',
+  };
+
+
+  handleChange = ({target}) => {
+    const { name, type } = target;
+    const value = type === 'checkbox' ? target.checked : target.value;
+  
+    this.setState({ 
+      [name]: value
+    })
+  }
+ 
+  
+  render(){
+    return(
+      <>
+        <form>
+          <CheckBoxF handleChange={ this.handleChange}/>
+          <CheckBoxM handleChange={ this.handleChange}/>
+          <Name value={this.state.name} handleChange={this.handleChange}/>
+          <Age value={this.state.age} handleChange={this.handleChange}/>
+          <DateBirth value={this.state.dateOfBirth} handleChange={this.handleChange}/>
+          <State value={this.state.estado} handleChange={this.handleChange}/>
+        </form>
+      </>
+    )
+  }
 }
 
 export default App;

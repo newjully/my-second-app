@@ -1,0 +1,45 @@
+body{
+    background-color: #f26f12;
+    color: #fff;
+    padding: 5em;
+    border-radius: 6px;
+    margin-bottom: 1em;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+
+label{
+    color: black;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    display: block;
+}
+input{
+    padding: 0.25em;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1em;
+    margin-bottom: 1em;
+}
+
+select{
+    padding: 0.25em;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1em;
+    margin-bottom: 1em;
+}
+
+option {
+    padding: 0.25em;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 1em;
+    margin-bottom: 1em;
+
+}
